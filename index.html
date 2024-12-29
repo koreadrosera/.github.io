@@ -1,262 +1,276 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>식충식물마트</title>
-   <style>
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식충식물마트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-       body {
-           font-family: Arial, sans-serif;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-       }
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-       .nav {
-           background-color: #fff;
-           border-bottom: 1px solid #ddd;
-           padding: 20px;
-       }
+        .nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+        }
 
-       .nav h1 {
-           font-size: 24px;
-           margin-bottom: 10px;
-           text-align: center;
-       }
+        .nav h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
-       .menu {
-           display: flex;
-           flex-wrap: wrap;
-           gap: 10px;
-           justify-content: center;
-           padding: 15px;
-           max-width: 1400px;
-           margin: 0 auto;
-       }
-       
-       .menu-item {
-           background-color: #f8f8f8;
-           border-radius: 4px;
-           padding: 8px 15px;
-           text-align: center;
-           min-width: 120px;
-           cursor: pointer;
-           border: none;
-           font-size: 14px;
-       }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .menu-item {
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            padding: 8px 15px;
+            text-align: center;
+            min-width: 120px;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
 
-       .menu-item:hover {
-           background-color: #f0f0f0;
-       }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+        }
 
-       .main-content {
-           flex: 1;
-           padding: 20px;
-           max-width: 1200px;
-           margin: 0 auto;
-           width: 100%;
-       }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
 
-       .product-list {
-           max-width: 800px;
-           margin: 20px auto;
-           padding: 0 20px;
-       }
+        .product-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
 
-       .product-item {
-           display: flex;
-           margin-bottom: 30px;
-           padding-bottom: 30px;
-           border-bottom: 1px solid #eee;
-           align-items: flex-start;
-       }
+        .product-item {
+            display: flex;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            align-items: flex-start;
+        }
 
-       .product-image {
-           width: 200px;
-           height: 200px;
-           object-fit: cover;
-           margin-right: 20px;
-       }
+        .product-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
 
-       .product-details {
-           flex: 1;
-       }
+        .product-details {
+            flex: 1;
+        }
 
-       .product-name {
-           font-size: 18px;
-           margin-bottom: 10px;
-       }
+        .product-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-       .product-price {
-           font-size: 16px;
-           color: #333;
-           font-weight: bold;
-       }
+        .product-price {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
 
-       .category-title {
-           font-size: 24px;
-           margin-bottom: 30px;
-           padding-bottom: 10px;
-           border-bottom: 2px solid #333;
-       }
+        .category-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
 
-       .order-guide {
-           background-color: #f8f8f8;
-           border-radius: 8px;
-           padding: 20px;
-           margin-top: 40px;
-       }
+        .order-guide {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+        }
 
-       .order-guide h2 {
-           font-size: 18px;
-           margin-bottom: 15px;
-           border-bottom: 1px solid #ddd;
-           padding-bottom: 10px;
-       }
+        .order-guide h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
 
-       .order-guide ol {
-           margin-left: 20px;
-           margin-bottom: 15px;
-       }
+        .order-guide ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
 
-       .order-guide li {
-           margin-bottom: 8px;
-       }
+        .order-guide li {
+            margin-bottom: 8px;
+        }
 
-       .phone-number {
-           background-color: #eee;
-           padding: 10px;
-           text-align: center;
-           border-radius: 4px;
-           margin-top: 15px;
-       }
-   </style>
+        .phone-number {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-   <nav class="nav">
-       <h1>식충식물마트</h1>
-       <div class="menu">
-           <button class="menu-item" onclick="showCategory('flytrap1')">파리지옥</button>
-           <button class="menu-item" onclick="showCategory('flytrap2')">파리지옥2</button>
-           <button class="menu-item" onclick="showCategory('sundew')">끈끈이주걱</button>
-           <button class="menu-item" onclick="showCategory('root-sundew')">구근 끈끈이주걱</button>
-           <button class="menu-item" onclick="showCategory('petiolais-sundew')">petiolais 끈끈이주걱</button>
-           <button class="menu-item" onclick="showCategory('pygmy-sundew')">pygmy 갬마</button>
-           <button class="menu-item" onclick="showCategory('native-sundew')">토종 끈끈이주걱</button>
-           <button class="menu-item" onclick="showCategory('darlingtonia')">다링토니아</button>
-           <button class="menu-item" onclick="showCategory('cephalotus')">세팔로투스</button>
-           <button class="menu-item" onclick="showCategory('tongbal')">통발</button>
-           <button class="menu-item" onclick="showCategory('aldrovanda')">알드로반다</button>
-           <button class="menu-item" onclick="showCategory('heliamphora')">헬리암포라</button>
-           <button class="menu-item" onclick="showCategory('R-gorgonias')">R.gorgonias</button>
-           <button class="menu-item" onclick="showCategory('nepenthes1')">네펜데스</button>
-           <button class="menu-item" onclick="showCategory('nepenthes2')">네펜데스2</button>
-           <button class="menu-item" onclick="showCategory('nepenthes3')">네펜데스3</button>
-           <button class="menu-item" onclick="showCategory('nepenthes4')">네펜데스4</button>
-           <button class="menu-item" onclick="showCategory('nepenthes-ampullaria')">네펜데스 앰풀라리아</button>
-           <button class="menu-item" onclick="showCategory('pinguicula1')">벌레잡이제비꽃</button>
-           <button class="menu-item" onclick="showCategory('pinguicula2')">벌레잡이제비꽃2</button>
-           <button class="menu-item" onclick="showCategory('pinguicula3')">벌레잡이제비꽃3</button>
-           <button class="menu-item" onclick="showCategory('pinguicula4')">벌레잡이제비꽃4</button>
-           <button class="menu-item" onclick="showCategory('care')">식충식물재배책</button>
-           <button class="menu-item" onclick="showCategory('tissue-culture')">조직배양튜브</button>
-           <button class="menu-item" onclick="showCategory('seeds')">종자</button>
-           <button class="menu-item" onclick="showCategory('supplies')">원예재제, 생수태</button>
-           <button class="menu-item" onclick="showCategory('sarracenia')">사라세니아 종자</button>
-       </div>
-   </nav>
+    <nav class="nav">
+        <h1>식충식물마트</h1>
+        <div class="menu">
+            <button class="menu-item" onclick="showCategory('flytrap1')">파리지옥</button>
+            <button class="menu-item" onclick="showCategory('flytrap2')">파리지옥2</button>
+            <button class="menu-item" onclick="showCategory('sundew')">끈끈이주걱</button>
+            <button class="menu-item" onclick="showCategory('root-sundew')">구근 끈끈이주걱</button>
+            <button class="menu-item" onclick="showCategory('petiolais-sundew')">petiolais 끈끈이주걱</button>
+            <button class="menu-item" onclick="showCategory('pygmy-sundew')">pygmy 갬마</button>
+            <button class="menu-item" onclick="showCategory('native-sundew')">토종 끈끈이주걱</button>
+            <button class="menu-item" onclick="showCategory('darlingtonia')">다링토니아</button>
+            <button class="menu-item" onclick="showCategory('cephalotus')">세팔로투스</button>
+            <button class="menu-item" onclick="showCategory('tongbal')">통발</button>
+            <button class="menu-item" onclick="showCategory('aldrovanda')">알드로반다</button>
+            <button class="menu-item" onclick="showCategory('heliamphora')">헬리암포라</button>
+            <button class="menu-item" onclick="showCategory('R-gorgonias')">R.gorgonias</button>
+            <button class="menu-item" onclick="showCategory('nepenthes1')">네펜데스</button>
+            <button class="menu-item" onclick="showCategory('nepenthes2')">네펜데스2</button>
+            <button class="menu-item" onclick="showCategory('nepenthes3')">네펜데스3</button>
+            <button class="menu-item" onclick="showCategory('nepenthes4')">네펜데스4</button>
+            <button class="menu-item" onclick="showCategory('nepenthes-ampullaria')">네펜데스 앰풀라리아</button>
+            <button class="menu-item" onclick="showCategory('pinguicula1')">벌레잡이제비꽃</button>
+            <button class="menu-item" onclick="showCategory('pinguicula2')">벌레잡이제비꽃2</button>
+            <button class="menu-item" onclick="showCategory('pinguicula3')">벌레잡이제비꽃3</button>
+            <button class="menu-item" onclick="showCategory('pinguicula4')">벌레잡이제비꽃4</button>
+            <button class="menu-item" onclick="showCategory('care')">식충식물재배책</button>
+            <button class="menu-item" onclick="showCategory('tissue-culture')">조직배양튜브</button>
+            <button class="menu-item" onclick="showCategory('seeds')">종자</button>
+            <button class="menu-item" onclick="showCategory('supplies')">원예재제, 생수태</button>
+            <button class="menu-item" onclick="showCategory('sarracenia')">사라세니아 종자</button>
+        </div>
+    </nav>
 
-   <main class="main-content">
-       <!-- 메인 화면 -->
-       <div id="mainContent">
-           <div class="order-guide">
-               <h2>식충식물마트 주문하기</h2>
-               <ol>
-                   <li>주문 목록</li>
-                   <li>주소</li>
-                   <li>이름</li>
-                   <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
-               </ol>
-               <div class="phone-number">
-                   핸드폰: 010 5045 5507
-               </div>
-           </div>
-       </div>
+    <main class="main-content">
+        <!-- 메인 화면 -->
+        <div id="mainContent">
+            <div class="order-guide">
+                <h2>식충식물마트 주문하기</h2>
+                <ol>
+                    <li>주문 목록</li>
+                    <li>주소</li>
+                    <li>이름</li>
+                    <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
+                </ol>
+                <div class="phone-number">
+                    핸드폰: 010 5045 5507
+                </div>
+            </div>
+        </div>
 
-       <!-- 카테고리 상품 목록 -->
-       <div id="categoryContent" style="display: none;">
-           <div class="product-list">
-               <h2 class="category-title" id="currentCategory"></h2>
-               <div id="productList">
-                   <!-- 상품들이 여기에 동적으로 추가됩니다 -->
-               </div>
-           </div>
-           <div class="order-guide">
-               <h2>식충식물마트 주문하기</h2>
-               <ol>
-                   <li>주문 목록</li>
-                   <li>주소</li>
-                   <li>이름</li>
-                   <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
-               </ol>
-               <div class="phone-number">
-                   핸드폰: 010 5045 5507
-               </div>
-           </div>
-       </div>
-   </main>
+        <!-- 카테고리 상품 목록 -->
+        <div id="categoryContent" style="display: none;">
+            <div class="product-list">
+                <h2 class="category-title" id="currentCategory"></h2>
+                <div id="productList"></div>
+            </div>
+            <div class="order-guide">
+                <h2>식충식물마트 주문하기</h2>
+                <ol>
+                    <li>주문 목록</li>
+                    <li>주소</li>
+                    <li>이름</li>
+                    <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
+                </ol>
+                <div class="phone-number">
+                    핸드폰: 010 5045 5507
+                </div>
+            </div>
+        </div>
 
-   <script>
-       const categoryData = {
-           'native-sundew': {
-               title: '토종 끈끈이주걱',
-               products: [
-                   {
-                       image: '/path/to/image1.jpg',
-                       name: '토종끈끈이주걱',
-                       price: ''
-                   },
-                   {
-                       image: '/path/to/image2.jpg',
-                       name: '토종끈끈이주걱',
-                       price: '40,000원'
-                   },
-                   {
-                       image: '/path/to/image3.jpg',
-                       name: '토종끈끈이주걱',
-                       price: '45,000원'
-                   },
-                   {
-                       image: '/path/to/image4.jpg',
-                       name: '토종끈끈이주걱',
-                       price: ''
-                   }
-               ]
-           }
-           // 다른 카테고리 데이터를 여기에 추가
-       };
+        <button onclick="showHome()" class="home-button">메인으로</button>
+    </main>
 
-       function showCategory(categoryId) {
-           const mainContent = document.getElementById('mainContent');
-           const categoryContent = document.getElementById('categoryContent');
-           const currentCategory = document.getElementById('currentCategory');
-           const productList = document.getElementById('productList');
+    <script>
+        // 카테고리 데이터
+        const categoryData = {
+            'native-sundew': {
+                title: '토종 끈끈이주걱',
+                products: [
+                    {
+                        image: './images/sundew1.jpg',
+                        name: '토종끈끈이주걱',
+                        price: ''
+                    },
+                    {
+                        image: './images/sundew2.jpg',
+                        name: '토종끈끈이주걱',
+                        price: '40,000원'
+                    },
+                    {
+                        image: './images/sundew3.jpg',
+                        name: '토종끈끈이주걱',
+                        price: '45,000원'
+                    }
+                ]
+            },
+            // 다른 카테고리들 추가...
+        };
 
- 만약 (categoryData[categoryId]) {
-               // 메인 콘텐츠 숨기기
- mainContent.style.display = 'none';
- 카테고리Content.style.display = '차단';
+        // 카테고리 보여주기
+        function showCategory(categoryId) {
+            const mainContent = document.getElementById('mainContent');
+            const categoryContent = document.getElementById('categoryContent');
+            const currentCategory = document.getElementById('currentCategory');
+            const productList = document.getElementById('productList');
 
-               // 카테고리 제목 설정
+            // 해당 카테고리 데이터가 없으면 알림
+            if (!categoryData[categoryId]) {
+                alert('준비 중입니다.');
+                return;
+            }
+
+            // 메인 콘텐츠 숨기고 카테고리 콘텐츠 보이기
+            mainContent.style.display = 'none';
+            categoryContent.style.display = 'block';
+
+            // 카테고리 제목 설정
  현재 카테고리.textContent = categoryData[categoryId].제목;
 
-               // 상품 목록 생성
+            // 상품 목록 생성
  productList.innerHTML = '';
  카테고리데이터[categoryId]제품.각 제품(제품 => {
  productList.innerHTML += '
@@ -269,8 +283,13 @@
  </div>
  `;
  });
-           }
-       }
+        }
+
+        // 메인 화면으로 돌아가기
+        기능. 쇼홈() {
+ document.getElementById('메인 콘텐츠').style.display = '차단';
+ document.getElementById('categoryContent').style.display = 'none';
+        }
  </script>
 </body>
 </html>
