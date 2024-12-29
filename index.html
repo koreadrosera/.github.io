@@ -225,60 +225,36 @@
    </main>
 
    <script>
-       // 카테고리 데이터
        const categoryData = {
-           'flytrap1': {
-               title: '파리지옥',
+           'pygmy-sundew': {
+               title: 'pygmy 갬마',
                products: []
            },
-           'flytrap2': {
-               title: '파리지옥2',
-               products: []
+           'native-sundew': {
+               title: '토종 끈끈이주걱',
+               products: [
+                   {
+                       image: './images/native_sundew1.jpg',
+                       name: '토종끈끈이주걱',
+                       price: ''
+                   },
+                   {
+                       image: './images/native_sundew2.jpg',
+                       name: '토종끈끈이주걱',
+                       price: '40,000원'
+                   }
+               ]
            },
-           'sundew': {
-               title: '끈끈이주걱',
-               products: []
-           },
-           'root-sundew': {
-               title: '구근 끈끈이주걱',
-               products: []
-           },
-           'petiolais-sundew': {
-               title: 'petiolais 끈끈이주걱',
-               products: []
-           },
-        const categoryData = {
-    'pygmy-sundew': {
-        title: 'pygmy 갬마',
-        products: []
-    },
-    'native-sundew': {
-        title: '토종 끈끈이주걱',
-        products: [
-            {
-                image: './images/native_sundew1.jpg',
-                name: '토종끈끈이주걱',
-                price: ''
-            },
-            {
-                image: './images/native_sundew2.jpg',
-                name: '토종끈끈이주걱',
-                price: '40,000원'
-            }
-        ]
-    },
-    'care': {
-        title: '식충식물재배책',
-        products: [
-            {
-                image: 'https://i.imgur.com/9PROx6c.jpg',
-                name: '식충식물재배책',
-                price: '23,000원'
-            }
-        ]
-    }
-};
-           // 다른 카테고리들도 같은 형식으로 추가...
+           'care': {
+               title: '식충식물재배책',
+               products: [
+                   {
+                       image: 'https://i.imgur.com/9PROx6c.jpg',
+                       name: '식충식물재배책',
+                       price: '23,000원'
+                   }
+               ]
+           }
        };
 
        // 카테고리 보여주기 함수
