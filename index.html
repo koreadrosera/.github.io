@@ -58,244 +58,241 @@
        .main-content {
            flex: 1;
            padding: 20px;
- 최대 너비: 1200 px;
- 여백: 0 auto;
- 너비: 100%;
+           max-width: 1200px;
+           margin: 0 auto;
+           width: 100%;
        }
 
- .제품 목록 {
- 최대 너비: 800 px;
- 마진: 20 px 오토;
- 패딩: 0 20 px;
+       .product-list {
+           max-width: 800px;
+           margin: 20px auto;
+           padding: 0 20px;
        }
 
- .제품 항목 {
- 디스플레이: 플렉스;
- 마진 바닥: 30 px;
- 패딩 하의: 30 px;
- 테두리 하단: px 솔리드 #ee 1개;
- 정렬 items: 플렉스 스타트;
+       .product-item {
+           display: flex;
+           margin-bottom: 30px;
+           padding-bottom: 30px;
+           border-bottom: 1px solid #eee;
+           align-items: flex-start;
        }
 
- .제품 이미지 {
- 너비: 200 px;
- 높이: 200 px;
- 객체 맞춤: 커버;
- 마진 라이트: 20 px;
+       .product-image {
+           width: 200px;
+           height: 200px;
+           object-fit: cover;
+           margin-right: 20px;
        }
 
- .제품-details {
- 플렉스: 1;
+       .product-details {
+           flex: 1;
        }
 
- .제품 이름 {
- 글꼴 크기: 18 px;
- 마진 바닥: 10 px;
+       .product-name {
+           font-size: 18px;
+           margin-bottom: 10px;
        }
 
- .제품 가격 {
- 글꼴 크기: 16 px;
- 색상: #333;
- 글꼴 무게: 굵게;
+       .product-price {
+           font-size: 16px;
+           color: #333;
+           font-weight: bold;
        }
 
- .category-title {
- 글꼴 크기: 24 px;
- 마진 바닥: 30 px;
- 패딩 바텀: px 10개;
- 경계 바닥: 2 px 솔리드 #333;
+       .category-title {
+           font-size: 24px;
+           margin-bottom: 30px;
+           padding-bottom: 10px;
+           border-bottom: 2px solid #333;
        }
 
- .주문 가이드 {
- background-color: #f8f8f8;
- 국경 radius: 8 px;
- 패딩: 20 px;
- 마진 탑: 40 px;
+       .order-guide {
+           background-color: #f8f8f8;
+           border-radius: 8px;
+           padding: 20px;
+           margin-top: 40px;
        }
 
- .주문 가이드 h2 {
- 글꼴 크기: 18 px;
- 마진 바닥: 15 px;
- 테두리 하단: px 솔리드 #DDd 1개;
- 패딩 바텀: px 10개;
+       .order-guide h2 {
+           font-size: 18px;
+           margin-bottom: 15px;
+           border-bottom: 1px solid #ddd;
+           padding-bottom: 10px;
        }
 
- .order-guide ol {
- 여백 왼쪽: 20 px;
- 마진 바닥: 15 px;
+       .order-guide ol {
+           margin-left: 20px;
+           margin-bottom: 15px;
        }
 
- .order-guide li {
- 마진 바닥: 8 px;
+       .order-guide li {
+           margin-bottom: 8px;
        }
 
- .전화번호 {
- 배경색: #eeee;
- 패딩: 10 px;
- 텍스트 align: 중심;
- 국경 radius: 4 px;
- 마진 탑: 15 px;
+       .phone-number {
+           background-color: #eee;
+           padding: 10px;
+           text-align: center;
+           border-radius: 4px;
+           margin-top: 15px;
        }
 
- 홈 버튼 {
- 위치: 고정;
- 하단: 20개의 px;
- 오른쪽: 20 px;
- 배경색: #333;
- 색상: 흰색;
- 패딩: 10 px 20 px;
- 국경 radius: 4 px;
- 커서: 포인터;
- 경계: 없음;
+       .home-button {
+           position: fixed;
+           bottom: 20px;
+           right: 20px;
+           background-color: #333;
+           color: white;
+           padding: 10px 20px;
+           border-radius: 4px;
+           cursor: pointer;
+           border: none;
        }
- </스타일>
-</머리>
-<바디>
- <nav class="nav">
- <h1>식충식물마트</h1>
- <div class="메뉴">
- <버튼 클래스="메뉴 항목" 클릭="showCategory('flytrap1')"파리지옥</버튼>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('flytrap2')"파리지옥2</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('sundew')">끈끈이주걱</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('root-sundew')">구근 끈끈이주걱</버튼>
- <버튼 클래스="메뉴 항목" 클릭="쇼 카테고리('페티올라리스-선듀')">페티올라리스 끈끈이주걱</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('pygmy-sundew')">피그미 갬마</버튼>
- 버튼 클래스="메뉴 항목" 클릭="showCategory('원어민 선듀')">토종 끈끈이주걱</버튼>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('darlingtonia')">다링토니아</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('cephalotus')">세팔로투스</button>
- <버튼 class="메뉴 항목" 클릭="showCategory('tongbal')">통발</버튼>
- <버튼 클래스="메뉴 항목" 클릭="쇼 카테고리('알드로반다')">알드로반다</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('헬리암포라')">헬리암포라</button>
- 버튼 클래스="메뉴 항목" 클릭="쇼 카테고리('R-고고니아스')">R.고니아스</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('nepenthes1')"네펜데스</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('nepenthes2')"네펜데스2</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('nepenthes3')"네펜데스3</버튼>
- <버튼 class="메뉴 항목" 클릭="showCategory('nepenthes4')"네펜데스4</버튼>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('네펜테스-암풀라리아')">네펜데스 앰풀라리아</button>
- <버튼 클래스="메뉴 항목" 클릭="쇼 카테고리('사라세니아')">사라세니아, 종자</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('pinguicula1')">벌레잡이제비꽃</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('pinguicula2')">벌레잡이제비꽃2</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('pinguicula3')">벌레잡이제비꽃3</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('pinguicula4')">벌레잡이제비꽃4</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('care')">식충식물재배책</button>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('조직-문화')">조직배양튜브</button>
- <버튼 class="메뉴 항목" 클릭="showCategory('씨앗')">종자</버튼>
- <버튼 클래스="메뉴 항목" 클릭="showCategory('공급품')">원예재제, 생수태</button>
- </div>
- </nav>
+   </style>
+</head>
+<body>
+   <nav class="nav">
+       <h1>식충식물마트</h1>
+       <div class="menu">
+           <button class="menu-item" onclick="showCategory('flytrap1')">파리지옥</button>
+           <button class="menu-item" onclick="showCategory('flytrap2')">파리지옥2</button>
+           <button class="menu-item" onclick="showCategory('sundew')">끈끈이주걱</button>
+           <button class="menu-item" onclick="showCategory('root-sundew')">구근 끈끈이주걱</button>
+           <button class="menu-item" onclick="showCategory('petiolais-sundew')">petiolais 끈끈이주걱</button>
+           <button class="menu-item" onclick="showCategory('pygmy-sundew')">pygmy 갬마</button>
+           <button class="menu-item" onclick="showCategory('native-sundew')">토종 끈끈이주걱</button>
+           <button class="menu-item" onclick="showCategory('darlingtonia')">다링토니아</button>
+           <button class="menu-item" onclick="showCategory('cephalotus')">세팔로투스</button>
+           <button class="menu-item" onclick="showCategory('tongbal')">통발</button>
+           <button class="menu-item" onclick="showCategory('aldrovanda')">알드로반다</button>
+           <button class="menu-item" onclick="showCategory('heliamphora')">헬리암포라</button>
+           <button class="menu-item" onclick="showCategory('R-gorgonias')">R.gorgonias</button>
+           <button class="menu-item" onclick="showCategory('nepenthes1')">네펜데스</button>
+           <button class="menu-item" onclick="showCategory('nepenthes2')">네펜데스2</button>
+           <button class="menu-item" onclick="showCategory('nepenthes3')">네펜데스3</button>
+           <button class="menu-item" onclick="showCategory('nepenthes4')">네펜데스4</button>
+           <button class="menu-item" onclick="showCategory('nepenthes-ampullaria')">네펜데스 앰풀라리아</button>
+           <button class="menu-item" onclick="showCategory('pinguicula1')">벌레잡이제비꽃</button>
+           <button class="menu-item" onclick="showCategory('pinguicula2')">벌레잡이제비꽃2</button>
+           <button class="menu-item" onclick="showCategory('pinguicula3')">벌레잡이제비꽃3</button>
+           <button class="menu-item" onclick="showCategory('pinguicula4')">벌레잡이제비꽃4</button>
+           <button class="menu-item" onclick="showCategory('care')">식충식물재배책</button>
+           <button class="menu-item" onclick="showCategory('tissue-culture')">조직배양튜브</button>
+           <button class="menu-item" onclick="showCategory('seeds')">종자</button>
+           <button class="menu-item" onclick="showCategory('supplies')">원예재제, 생수태</button>
+       </div>
+   </nav>
 
- <메인 클래스="메인 콘텐츠">
- <!-- 메인 화면 -->
- <div id= "메인 콘텐츠">
- <div class="주문 가이드">
- <h2>식충식물마트 주문하기</h2>
- <올>
- <li>주문 목록</li>
- <li>주소</li>
- <li>이름</li>
- <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
- </ol>
- <div class="전화번호">
- 핸드폰: 010 5045 5507
- </div>
- </div>
- </div>
+   <main class="main-content">
+       <!-- 메인 화면 -->
+       <div id="mainContent">
+           <div class="order-guide">
+               <h2>식충식물마트 주문하기</h2>
+               <ol>
+                   <li>주문 목록</li>
+                   <li>주소</li>
+                   <li>이름</li>
+                   <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
+               </ol>
+               <div class="phone-number">
+                   핸드폰: 010 5045 5507
+               </div>
+           </div>
+       </div>
 
- <!-- 카테고리 상품 목록 -->
- <div id="categoryContent" 스타일="디스플레이: 없음;">
- <div class="제품 목록">
- <h2 클래스="category-title" ID="현재 카테고리"></h2>
- <div id= "productList"></div>
- </div>
- <div class="주문 가이드">
- <h2>식충식물마트 주문하기</h2>
- <올>
- <li>주문 목록</li>
- <li>주소</li>
- <li>이름</li>
- <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
- </ol>
- <div class="전화번호">
- 핸드폰: 010 5045 5507
- </div>
- </div>
- </div>
+       <!-- 카테고리 상품 목록 -->
+       <div id="categoryContent" style="display: none;">
+           <div class="product-list">
+               <h2 class="category-title" id="currentCategory"></h2>
+               <div id="productList"></div>
+           </div>
+           <div class="order-guide">
+               <h2>식충식물마트 주문하기</h2>
+               <ol>
+                   <li>주문 목록</li>
+                   <li>주소</li>
+                   <li>이름</li>
+                   <li>핸드폰 번호를 작성해서 아래 "핸드폰 문자"로 보내주세요</li>
+               </ol>
+               <div class="phone-number">
+                   핸드폰: 010 5045 5507
+               </div>
+           </div>
+       </div>
 
        <button onclick="showHome()" class="home-button">메인으로</button>
    </main>
 
    <script>
        const categoryData = {
-           'pygmy-sundew': {
-               title: 'pygmy 갬마',
-               products: []
-           },
-           'native-sundew': {
-               title: '토종 끈끈이주걱',
+           'tissue-culture': {
+               title: '식충식물 조직배양튜브',
                products: [
                    {
-                       image: './images/native_sundew1.jpg',
-                       name: '토종끈끈이주걱',
-                       price: ''
+                       image: 'https://i.imgur.com/wvW729L.jpg',
+                       name: '끈끈이주걱 조직배양튜브 Hartmeyorum',
+                       price: '50,000원'
                    },
                    {
-                       image: './images/native_sundew2.jpg',
-                       name: '토종끈끈이주걱',
-                       price: '40,000원'
+                       image: 'https://i.imgur.com/9PROx6c.jpg',
+                       name: '파리지옥 조직배양튜브 B52',
+                       price: '50,000원'
+                   },
+                   {
+                       image: 'https://i.imgur.com/J9zPnDz.jpg',
+                       name: '벌레잡이제비꽃 조직배양튜브 moranensis, primuliflora',
+                       price: '50,000원'
                    }
                ]
            },
-           'care': {
-               title: '식충식물재배책',
+           'flytrap1': {
+               title: '파리지옥',
                products: [
                    {
-                       image: 'https://i.imgur.com/9PROx6c.jpg',
-                       name: '식충식물재배책',
-                       price: '23,000원'
-                   }
+                       image: 'https://i.imgur.com/CEd0gCZ.jpg',
+                       name: 'Alien',
+                       price: '55,000원'
+                   },
+                   // ... 기존 상품들
                ]
-           }
+           },
+           // ... 다른 카테고리들
        };
 
-       // 카테고리 보여주기 함수
        function showCategory(categoryId) {
            const mainContent = document.getElementById('mainContent');
            const categoryContent = document.getElementById('categoryContent');
            const currentCategory = document.getElementById('currentCategory');
            const productList = document.getElementById('productList');
 
-           // 메인 콘텐츠 숨기고 카테고리 콘텐츠 보이기
            mainContent.style.display = 'none';
            categoryContent.style.display = 'block';
 
-           // 카테고리 제목 설정
            currentCategory.textContent = categoryData[categoryId]?.title || categoryId;
 
-           // 상품 목록 생성
-           productList.innerHTML = '';
+ productList.innerHTML = '';
            
-           if (categoryData[categoryId]?.products?.length > 0) {
-               categoryData[categoryId].products.forEach(product => {
-                   productList.innerHTML += `
-                       <div class="product-item">
-                           <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='/api/placeholder/200/200'">
-                           <div class="product-details">
-                               <h3 class="product-name">${product.name}</h3>
-                               <p class="product-price">${product.price}</p>
-                           </div>
-                       </div>
-                   `;
-               });
-           } else {
-               productList.innerHTML = '<p style="text-align: center; padding: 20px;">준비 중입니다.</p>';
+ 만약 (categoryData[categoryId]?제품?길이 > 0) {
+ 카테고리데이터[categoryId]제품.각 제품(제품 => {
+ productList.innerHTML += '
+ <div class="제품 항목">
+ <img src="${product.image}" alt="${product.name }" class="product-image" 오류="this.src='/api/placeholder/200'>
+ <div class="제품-details">
+ <h3 class="제품 이름">${product.name }</h3>
+ <p class="제품 가격">${제품 가격}<p>
+ </div>
+ </div>
+ `;
+ });
+           } 또 다른 {
+ productList.innerHTML = '<p style="text-align: 센터; 패딩: 20 px;">준비 중입니다.</p>';
            }
        }
 
-       // 메인 화면으로 돌아가기
-       function showHome() {
-           document.getElementById('mainContent').style.display = 'block';
-           document.getElementById('categoryContent').style.display = 'none';
+       기능. 쇼홈() {
+ document.getElementById('메인 콘텐츠').style.display = '차단';
+ document.getElementById('categoryContent').style.display = 'none';
        }
-   </script>
+ </script>
 </body>
 </html>
